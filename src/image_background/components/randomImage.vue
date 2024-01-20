@@ -35,20 +35,12 @@ const unsplashImage = ref<ImageAdaptedEntity>();
 
 const reactiveStyles = computed(
   () =>
-    `background: url("${unsplashImage.value?.url || unsplashStore.getDefaultImage()}") no-repeat center; background-size: cover;`
+    `background: url("${unsplashImage.value?.url || unsplashStore.getDefaultImage()}") no-repeat fixed; background-size: cover;`
 );
 
 onMounted(async () => {
   const data = await unsplashStore.getRandomImage();
 
-  console.log(data);
-
   unsplashImage.value = data;
 });
 </script>
-
-<style scoped>
-main {
-  height: 100vh;
-}
-</style>

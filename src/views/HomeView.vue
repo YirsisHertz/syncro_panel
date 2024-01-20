@@ -1,8 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import WebCardListVue from "../webcard/components/WebCardList.vue";
+</script>
 
 <template>
   <div>
-    <h1>Home screen</h1>
-    <h1>Home screen</h1>
+    <WebCardListVue />
   </div>
 </template>
