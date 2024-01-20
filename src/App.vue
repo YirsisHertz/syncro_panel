@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router"
+import { RouterView } from "vue-router";
+import RandomImage from "./image_background/components/randomImage.vue";
 </script>
 
 <template>
-  <main>
+  <RandomImage>
     <RouterView />
-  </main>
+  </RandomImage>
 </template>

@@ -9,4 +9,4 @@ export default {
   daisyui: {
     themes: ["light", "winter"]
   }
-}
+};
