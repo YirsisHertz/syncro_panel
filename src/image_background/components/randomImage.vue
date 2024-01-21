@@ -4,16 +4,16 @@
 
     <ImageDetails :color="unsplashImage?.color">
       <template v-slot:username>
-        {{ unsplashImage?.user.username || "N/A" }}
+        {{ unsplashImage?.user.username || "Unknow" }}
       </template>
       <template v-slot:instagram>
-        {{ unsplashImage?.user.instagram || "N/A" }}
+        {{ unsplashImage?.user.instagram || "Unknow" }}
       </template>
       <template v-slot:twitter>
-        {{ unsplashImage?.user.twitter || "N/A" }}
+        {{ unsplashImage?.user.twitter || "Unknow" }}
       </template>
       <template v-slot:color>
-        {{ unsplashImage?.color }}
+        {{ unsplashImage?.color || "#FFFFFF" }}
       </template>
       <template v-slot:description>
         {{ unsplashImage?.alt }}
@@ -39,8 +39,7 @@ const reactiveStyles = computed(
 );
 
 onMounted(async () => {
-  const data = await unsplashStore.getRandomImage();
-
-  unsplashImage.value = data;
+  // const data = await unsplashStore.getRandomImage();
+  // unsplashImage.value = data;
 });
 </script>

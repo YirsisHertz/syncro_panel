@@ -6,5 +6,6 @@ export const environment: Environment = {
     access_key: "", // string
     secret_key: "", // string,
     default_image: "" // string
-  }
+  },
+  webcard_base_url: ""
 };

@@ -7,4 +7,5 @@ interface Unsplash {
 
 export interface Environment {
   unsplash: Unsplash;
+  webcard_base_url: string;
 }

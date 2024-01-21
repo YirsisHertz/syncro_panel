@@ -19,7 +19,7 @@ export const RandomImageAdapter = (
 ): ImageAdaptedEntity => {
   return {
     alt: imageEntity.alt_description || "image",
-    color: imageEntity.color || "#333333",
+    color: imageEntity.color || "#FFFFFF",
     url: imageEntity.urls?.regular || environment.unsplash.default_image,
     user: {
       instagram: imageEntity.user?.instagram_username,
