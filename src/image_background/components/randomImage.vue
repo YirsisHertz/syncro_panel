@@ -35,11 +35,11 @@ const unsplashImage = ref<ImageAdaptedEntity>();
 
 const reactiveStyles = computed(
   () =>
-    `background: url("${unsplashImage.value?.url || unsplashStore.getDefaultImage()}") no-repeat fixed; background-size: cover;`
+    `background: url("${unsplashImage.value?.url || unsplashStore.getDefaultImage()}") no-repeat fixed; background-size: 100% 100%;`
 );
 
 onMounted(async () => {
-  // const data = await unsplashStore.getRandomImage();
-  // unsplashImage.value = data;
+  const data = await unsplashStore.getRandomImage();
+  unsplashImage.value = data;
 });
 </script>
