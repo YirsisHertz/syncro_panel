@@ -7,7 +7,9 @@
   </div>
 
   <div v-else class="list">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-10">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-10 py-20"
+    >
       <WebCard
         v-for="webcard in webcards"
         :key="webcard.id"
@@ -36,7 +38,7 @@ const webcards = ref<WebCardEntity[]>([]);
 onMounted(async () => {
   const data = await webcardStore.getAllWebCards();
 
-  webcards.value = data;
+  webcards.value = data as WebCardEntity[];
 });
 </script>
 
