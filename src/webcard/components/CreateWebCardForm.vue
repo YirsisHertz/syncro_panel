@@ -7,31 +7,36 @@
           <h2 class="card-title font-extrabold">Preview</h2>
           <hr />
 
-          <div class="flex justify-around items-center">
-            <WebCard class="w-1/3" :webcard="{ ...webcardForm, id: '123' }" />
+          <div class="flex flex-wrap lg:block justify-around items-center">
+            <WebCard
+              class="md:w-1/3 lg:w-full w-full"
+              :webcard="{ ...webcardForm, id: '123' }"
+            />
 
-            <label class="form-control font-extrabold">
-              <div class="label">
-                <span class="label-text"> Select First Gradient Color </span>
-              </div>
-              <input
-                type="color"
-                placeholder="http://localhost:8080"
-                class="w-full h-20"
-                v-model="webcardForm.colors.primary"
-              />
-            </label>
+            <div class="lg:flex justify-between">
+              <label class="form-control font-extrabold">
+                <div class="label">
+                  <span class="label-text"> Select First Gradient Color </span>
+                </div>
+                <input
+                  type="color"
+                  placeholder="http://localhost:8080"
+                  class="w-full h-20"
+                  v-model="webcardForm.colors.primary"
+                />
+              </label>
 
-            <label class="form-control font-extrabold">
-              <div class="label">
-                <span class="label-text"> Select Second Gradient Color </span>
-              </div>
-              <input
-                type="color"
-                class="w-full h-20"
-                v-model="webcardForm.colors.secondary"
-              />
-            </label>
+              <label class="form-control font-extrabold">
+                <div class="label">
+                  <span class="label-text"> Select Second Gradient Color </span>
+                </div>
+                <input
+                  type="color"
+                  class="w-full h-20"
+                  v-model="webcardForm.colors.secondary"
+                />
+              </label>
+            </div>
           </div>
         </div>
 

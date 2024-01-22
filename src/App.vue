@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
+import DigitalClock from "./clock/components/DigitalClock.vue";
 import RandomImage from "./image_background/components/randomImage.vue";
 </script>
 
 <template>
   <main>
     <RandomImage>
+      <DigitalClock />
+
       <RouterView />
     </RandomImage>
   </main>
