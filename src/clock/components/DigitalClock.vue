@@ -1,16 +1,21 @@
 import { computed, onMounted } from 'vue';
 <template>
-  <div class="clock font-extrabold text-3xl text-center">
+  <div class="clock font-extrabold text-center">
     <h1 class="px-10 relative top-10 py-5 rounded-md">
-      {{ time }}
-      <br />
-      {{ getDate() }}
+      <span class="text-3xl">
+        {{ time }}
+        <br />
+        {{ getDate() }}
+      </span>
+
+      <ServerStatus />
     </h1>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
+import ServerStatus from "../../components/ServerStatus.vue";
 
 const time = ref("00:00:00");
 
