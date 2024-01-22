@@ -1,12 +1,12 @@
 import { computed, onMounted } from 'vue';
 <template>
-  <h1
-    class="clock px-10 py-5 rounded-md bg-white font-extrabold text-3xl text-center"
-  >
-    {{ time }}
-    <br />
-    {{ getDate() }}
-  </h1>
+  <div class="clock font-extrabold text-3xl text-center">
+    <h1 class="px-10 relative top-10 py-5 rounded-md">
+      {{ time }}
+      <br />
+      {{ getDate() }}
+    </h1>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -45,9 +45,13 @@ onMounted(() => {
 
 <style scoped>
 .clock {
-  position: relative;
-  width: fit-content;
-  top: 4rem;
-  left: calc((100vw / 2) - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+h1 {
+  background-color: rgba(255, 250, 250, 0.8);
 }
 </style>
