@@ -13,10 +13,14 @@ import { environment } from "../environments/environments";
 const status = ref(false);
 
 const verifyServerStatus = async () => {
-  const res = await fetch(`${environment.webcard_base_url}/healt`);
+  try {
+    const res = await fetch(`${environment.webcard_base_url}/healt`);
 
-  if (res.ok && res.status === 200) status.value = true;
-  else status.value = false;
+    if (res.ok && res.status === 200) status.value = true;
+    else status.value = false;
+  } catch (error) {
+    status.value = false;
+  }
 };
 
 onMounted(() => {

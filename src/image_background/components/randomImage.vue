@@ -2,7 +2,7 @@
   <main :style="reactiveStyles">
     <slot></slot>
 
-    <ImageDetails :color="unsplashImage?.color">
+    <!-- <ImageDetails :color="unsplashImage?.color">
       <template v-slot:username>
         {{ unsplashImage?.user.username || "Unknow" }}
       </template>
@@ -18,7 +18,7 @@
       <template v-slot:description>
         {{ unsplashImage?.alt }}
       </template>
-    </ImageDetails>
+    </ImageDetails> -->
   </main>
 </template>
 
@@ -26,8 +26,6 @@
 import { computed, onMounted, ref } from "vue";
 import type { ImageAdaptedEntity } from "../adapters/presenters/randomImage.adapter";
 import { useUnsplashStore } from "../stores/unsplash.store";
-
-import ImageDetails from "./imageDetails.vue";
 
 const unsplashStore = useUnsplashStore();
 
