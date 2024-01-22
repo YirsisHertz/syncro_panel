@@ -8,7 +8,7 @@
 
   <div v-else class="list">
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-10 py-20"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-10 py-20"
     >
       <WebCard
         v-for="webcard in webcards"
