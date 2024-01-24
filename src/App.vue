@@ -2,6 +2,7 @@
 import { RouterView } from "vue-router";
 import DigitalClock from "./clock/components/DigitalClock.vue";
 import RandomImage from "./image_background/components/randomImage.vue";
+import ReloadPrompt from './components/ReloadPrompt.vue'
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import RandomImage from "./image_background/components/randomImage.vue";
 
       <RouterView />
     </RandomImage>
+
+    <ReloadPrompt />
   </main>
 </template>
 
